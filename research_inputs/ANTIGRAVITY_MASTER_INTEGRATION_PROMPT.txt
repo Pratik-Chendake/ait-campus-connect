@@ -1,0 +1,168 @@
+GOOGLE ANTIGRAVITY — MASTER IMPLEMENTATION PROMPT
+PROJECT: AIT CAMPUS CONNECT / CAMPUS ACHIEVEMENT & PARTICIPATION PORTAL
+TASK: INTEGRATE THE SUPPLIED AIT PUNE CLUB, LEADERSHIP, HISTORICAL EVENT AND OPPORTUNITY RESEARCH INTO THE EXISTING WEBSITE
+RESEARCH SNAPSHOT: 24 OCTOBER 2026 (INDIA STANDARD TIME)
+
+YOUR ROLE
+Act as a senior full-stack engineer, database architect, data-ingestion specialist, research verifier, UI/UX designer, QA engineer, and secure deployment engineer. You are implementing real changes to MY EXISTING, WORKING AIT Pune website. Do not give me merely a theoretical plan, a mockup, or an isolated replacement demo. Inspect the current repository, make the necessary code/database/backend/frontend changes, run checks and demonstrate that the imported data is visible and properly classified in the running site.
+
+HARD RULE #1 — NEVER REBUILD OR BREAK THE EXISTING WEBSITE
+- Start by inspecting the current source code, package.json, routes, backend/API, authentication, role guards, database models, migrations, uploaded file storage, UI kit, and styling.
+- Preserve the established branding, navigation, layouts, working student portfolios, hackathon discovery, event registration, team formation, certificates/achievements, research-paper/project portfolios, sports and cultural participation, opportunities, search, notifications, and admin dashboards. Preserve all other working features.
+- The original project is an Unstop-inspired AIT Pune Campus Achievement & Participation Portal (often called AIT Campus Connect / AIT ONE). Extend and improve it, rather than creating a second disconnected app or replacing it with static cards.
+- An earlier blueprint used React + Vite + TypeScript + Tailwind + React Router; Node/Express TypeScript REST API; PostgreSQL/Prisma. HOWEVER, ACTUAL REPOSITORY CONTENT IS AUTHORITATIVE. Use the existing stack and conventions; do not gratuitously migrate frameworks or databases.
+- Do not reset the production database, replace existing data, discard user achievements, or mutate auth settings without a safe migration and backup plan. Database seeds must be repeatable/idempotent.
+- The site is a student project. Do not misrepresent it as an official AIT-operated system, and do not claim access to AIT internal databases or official appointment verification unless independently established.
+
+INPUT FILES YOU WILL RECEIVE
+1) document (6)(1).pdf — very large AY 2025–26 AIT club/activity report, ~583 pages; PRIMARY HISTORICAL EVIDENCE ONLY.
+2) AIT Student Club Instagram Directory(1).pdf — earlier generated research/transcription (~14 pages), including suggested events, hackathons and purported AY 2026–27 appointment roster; SECONDARY RESEARCH, NOT VERIFIED TRUTH.
+3) Pasted text(3).txt — the user's 2026–27 research and appointment-verification constraints; treat its strict safety/accuracy requirements as binding.
+4) ait_clubs_opportunities_seed.json — curated data prepared for this implementation, including 23 user-supplied Instagram accounts, a small number of source-linked event/opportunity records, and unpublished review candidates.
+5) RESEARCH_INTEGRATION_RULES.md — explicit provenance, conflict, publication and acceptance rules.
+6) This prompt.
+If all input files are supplied as a ZIP, extract them into a temporary research_inputs/ directory, then follow the same process. Do not serve confidential source PDFs from a public assets directory unless explicitly approved. Do not commit any secrets or .env files.
+
+MISSION AND OUTCOME
+Populate and connect five database-backed capabilities within the EXISTING site:
+A. AIT Club Directory & verified AY-specific Leadership (23 specified Instagram accounts, with optional discovery of other authentic AIT clubs)
+B. Current & Upcoming Events / Club Recruitment
+C. Hackathons & Competitions (including problem statements and team workflows)
+D. Internships, Fellowships, Research, Scholarships, and Open-Source Contributions
+E. Past Events, Participation, Winners, Achievements, Photo/Report Archive
+Data must be searchable, filterable, mobile-friendly, linked to source evidence, date-aware, and managed by authorized administrators. The site's existing login, students, registrations, team finding, profiles and achievements must integrate with these records.
+
+SOURCE PRIORITY / NON-NEGOTIABLE FACT CHECKING
+1. Official organizer's live event page or direct institutional announcement, for the fact specifically asserted.
+2. Authentic AY 2026–27 official AIT appointment circular/official club announcement, for named current secretaries, joint secretaries, faculty/staff coordinators.
+3. First-party club/community/event profiles for their own events (e.g. official Innerve event website, GDG AIT chapter, official GitHub project issues).
+4. Historical AY 2025–26 report ONLY for historical AY 2025–26 details.
+5. Earlier Gemini/research PDF ONLY as leads or manually reviewable candidate records. It is NOT proof of current appointments, deadlines, prizes, registrations or comprehensive Instagram coverage.
+6. User-supplied Instagram URLs establish links the user wants in the club directory; they do NOT by themselves authenticate profile ownership, follower counts, leadership or newly posted events.
+Never infer an event from a repository name; never infer an internship from a GitHub issue; never infer current leadership from last year's report. If dates, fees, prizes, contact info, eligibility, problem statements, application status or outcomes are missing, leave them null and display “Not confirmed” / “Verification pending,” not invented numbers or placeholder facts disguised as live information.
+For AY 2026–27 student, faculty and staff appointments, require source explicitly applicable to AY 2026–27. The prior research PDF claims circular AIT/324/Appt-St-IC/Prin (May 2026). Do NOT bulk-publish its names before reviewing the primary authentic circular. Keep reported appointments in a hidden admin verification queue if necessary. Do not publish any previous-year names as current.
+Do not reuse the contradictory ‘Innerve 11 on 30–31 Jan 2027’ from the secondary PDF. The official event site https://www.innerve.tech/ identifies 29–30 JANUARY 2027. Treat team size, prize pool, problem statements, registration windows, accommodation, certificates, internships or funding as UNCONFIRMED UNTIL REVERIFIED for this edition. Do not label Innerve registration OPEN without confirming an actual currently open registration form.
+Check the current India time when importing, rendering statuses and running jobs. All raw timestamps should be timezone-aware and stored as UTC where appropriate; display in Asia/Kolkata. Distinguish event start/end, registration opens/closes, announcement date, and source-verification date. A future event can have CLOSED registration; a past announcement can advertise a future event.
+
+THE 23 USER-SUPPLIED CLUB ACCOUNTS — INCLUDE EACH EXACTLY ONCE
+01 Debate Quiz & Dramatics (DDQ) — https://www.instagram.com/ddqclub/
+02 Nature Club — https://www.instagram.com/ait_nature_club/
+03 Fine Arts — https://www.instagram.com/fine._.arts._.ait/
+04 Sports Club — https://www.instagram.com/aitsportsclub/
+05 Media / Press & News Cell — https://www.instagram.com/ait_media_cell/
+06 GDSC / GDG on Campus AIT Pune — https://www.instagram.com/gdsc_aitpune/
+07 Cycling Club — https://www.instagram.com/ait_cycling_club/
+08 Open Source Software (OSS) Club — https://www.instagram.com/ossclub.ait/
+09 Public Relations (PR) Cell — https://www.instagram.com/ait_pr_cell/
+10 Feet Tappers / Music & Dance — https://www.instagram.com/ait_feet_tappers/
+11 Radio Raaga — https://www.instagram.com/radioraaga/
+12 Cultural & Musical Board — https://www.instagram.com/culturalboard_ait/
+13 Research & Development Cell — https://www.instagram.com/research_and_development_cell/
+14 Magazine Board — https://www.instagram.com/magboard/
+15 Entrepreneurship Cell — https://www.instagram.com/ecell_ait/
+16 Spiritual Club — https://www.instagram.com/ait_spiritual_club/
+17 ISDF — https://www.instagram.com/isdf_ait/
+18 NSS / Rotaract — https://www.instagram.com/ait_nss_rotaract_club/
+19 Robotics / CEAR — https://www.instagram.com/robotics.club_ait/
+20 Technical & Mathematics Board — https://www.instagram.com/aittechnicalboard/
+21 Coding / Competitive Programming Cell — https://www.instagram.com/coding_cell_ait/
+22 Social Media Cell — https://www.instagram.com/ait_social_media_cell/
+23 Film Club — https://www.instagram.com/filmclub_ait/
+Normalize Instagram URLs: strip query/tracking parameters, retain exact handle punctuation, and never create duplicate club rows because of alias names. Add optional alias mappings for GDSC/GDG, CEAR/Robotics, Press & News/Media, CP Club/Coding Cell, Cultural Board, etc. Additional clubs from the secondary report (EV, Drone, Astronomy, SAE, CIDC, AR/VR) may be placed in a separate pending-verification directory; DO NOT dilute the requested 23-club completeness report.
+
+MINIMUM SCHEMA / DATABASE DESIGN — MAP TO EXISTING TABLES FIRST
+Reuse existing entities and extend with non-destructive migrations. Ensure equivalent fields and relations for:
+- Club: id, slug, displayName, aliases[], category, description (not invented), logo/banner (licensed/approved), instagramHandle, instagramUrl, officialUrl, contactEmail (only if sourced), academicYear, visibility, verifiedAt, updatedAt.
+- ClubLeadership: id, clubId, fullName, role, kind STUDENT|FACULTY|STAFF, academicYearStart, academicYearEnd, sourceId, primaryDocumentVerified boolean, verificationStatus, publishedAt/null. Must support multiple secretaries and changing annual office bearers. Do not attach unauthenticated personal contact details.
+- SourceRecord: id, url or file reference, title, type (OFFICIAL_EVENT/INSTITUTIONAL/CLUB/INSTAGRAM/UPLOADED_HISTORICAL/SECONDARY_REPORT), publishing date, accessedAt, academicYear, extractedClaim, notes, confidence, conflicts, reviewer.
+- Event: id, slug, name, type, description, organizingClubId, coOrganizers, eligibility, venue, online/hybrid/offline, eventStartAt/endAt, registrationOpenAt/closeAt, applicationUrl, eventUrl, registrationMode (INTERNAL/EXTERNAL/INFO_ONLY), fee, teamSizeMin/max, prizes (verified only), problemStatements[]/tracks[], poster, sourceIds, academicYear, moderationStatus, eventStatus and registrationStatus independently derived.
+- Opportunity: id, type (INTERNSHIP/JOB/FELLOWSHIP/RESEARCH/SCHOLARSHIP/OPEN_SOURCE/RECRUITMENT), companyOrOrganizer, title, officialApplyUrl, location/mode, stipend, eligibility, requiredSkills, applyDeadline, sourceIds, verifiedAt, moderationStatus, lifecycleStatus. Distinguish unpaid volunteer/project work from paid employment.
+- PastEventArchive: eventId or historical record, academicYear, date(s), historical report link/page, verified attendance/winners only, media metadata, eligible public visibility.
+- Keep or map pre-existing Registration, Team, TeamInvitation, StudentProfile, Achievement, Certificate, Notification, SavedOpportunity, AuditLog entities. Build real foreign-key relationships; do NOT generate fake student registrations or winners.
+- IngestionRun + IngestionCandidate/ReviewQueue tables for evidence provenance, comparisons, validation, duplicate checks and human approval.
+Support unique constraints on club instagramHandle (case-normalized) and event source canonical URLs; upsert on stable keys, protect manual edits from automated overwrite, and log all ingestion changes.
+
+MANDATORY IMPORT LOGIC
+Step 1: Snapshot/backup database, inspect migrations, and ensure a clean baseline.
+Step 2: Validate the supplied JSON against a schema, log row-level errors, report expected count of 23 clubs.
+Step 3: UPSERT exactly the 23 canonical directory clubs, preserving existing club IDs, manually written descriptions, branding, memberships and linked events.
+Step 4: Import only research rows with approved status and sufficiently authoritative sources as public listings. Insert all secondary or conflicted candidate claims into moderation queue without publicly presenting them as verified/open.
+Step 5: Ensure event status is time-calculated (UPCOMING/ONGOING/COMPLETED) and separately registration (NOT_ANNOUNCED/OPEN/CLOSED/EXPIRED/UNKNOWN). Never claim open availability from a static research snapshot.
+Step 6: Historical 2025–26 documents should drive archive records only. Keep last year's leadership unpublished in current AY profile; if displayed historically, label YEAR and historical source.
+Step 7: Enable manual administrative corrections, evidence attachments, approval/rejection, version history and conflict annotation. Protect approval APIs using existing RBAC.
+Step 8: Re-run seed/import to verify idempotency: no duplicate clubs/events or duplicate source records.
+
+SPECIFIC SOURCE-LINKED RECORDS / DECISIONS
+- Innerve 11.0 (OSS): official event URL https://www.innerve.tech/ ; 29–30 Jan 2027; FUTURE EVENT, REGISTRATION UNCONFIRMED. Display event with direct official link, date and evidence; no invented prizes/tracks/team size/problem statement/deadline.
+- Anubhav-frontend-neo (OSS): https://github.com/aitoss/Anubhav-frontend-neo/issues ; GitHub open issues at research snapshot; opportunity type OPEN_SOURCE_CONTRIBUTION not INTERNSHIP or PAID JOB. Recheck issues upon refresh, because issues may close.
+- GDG on Campus AIT: https://gdg.community.dev/gdg-on-campus-army-institute-of-technology-pune-india/ ; link as club/community reference, do not synthesize future workshops if none are listed.
+- Stellar IQ Space Quiz 2026: 24–25 Oct 2026 final, initial application deadline reported as 16 Oct; CLUB/ORGANIZER ROLE NEEDS PRIMARY VERIFICATION. Keep as review candidate, not a fresh open application; do not call completed until event actually ends.
+- Black Hat India CTF: date was listed as 28 Nov 2026 in earlier research, while related conference was in October; conflicting external schedule. QUEUE FOR REVIEW and avoid claiming official ISDF promotion unless sourced by ISDF itself.
+- NEXUS club recruitment: potential AIT club portal; active admission to positions, AY applicability and roles unverified. Show only if organizer/owner confirms a live application.
+- E-Cell Ignite 2026, FSOC, Aakriti 2026–27, NSS drives, Avishkar campus timeline: no invented dates or active registration status. Queue for further investigation.
+- Cultural Aakriti: 17–24 Sep 2025 in AY 2025–26 report; HISTORICAL ARCHIVE only. Freshers 10 Aug 2025 also archive eligible.
+- Amethyst 2026: date conflict between sources (8–11 vs 8–12 Apr 2026). Do not publish exact end date until reconciled.
+- Past hackathon, robotics, cultural and club reports: extract each sourced item carefully; attach historical AY. Do NOT assume past attendance counts are current or that a PDF activity report is proof of a future recurrence.
+- AIT admission notices are NOT club events. Do not put them in the competition feed.
+
+FRONTEND / DESIGN REQUIREMENTS
+Retain existing deep navy/teal/white identity if present. Build premium, responsive integrations that feel native to the original portal. Do not replace its homepage or brand unnecessarily.
+1. /clubs: 23 distinct directory cards with name, focus/category, canonical Instagram link, verification state, optional logo if rights/quality established, and tabs for Technical, Cultural, Sports, Community, Media, Entrepreneurship and All.
+2. /clubs/:slug: top section, about, verified current year leadership if available, student/faculty/staff distinction, source+last-verified, past events, upcoming events, Instagram button, participating achievements, request correction. On unknown names show “2026–27 office bearers not yet verified” rather than an empty fake committee.
+3. /events and dashboard widgets: actual event cards for verified listings only; date-aware countdown, internal vs external registration CTA, registration closed status, event category tags, source disclosure, an archive tab for past events.
+4. /hackathons: event filters, eligibility, team size and deadlines only if sourced; original complete problem statements/tracks with source attribution when legitimately available; user team matching and saved items must reuse existing implementation.
+5. /opportunities: separate jobs/internships/scholarships/research/open-source/contributions/club recruitments; do not mix open issues with jobs; label stipend as unknown unless confirmed.
+6. /club-archive or nested archive views: academic year filters, gallery/report evidence, competitions, achievements and winner lists ONLY from supported sources and with proper moderation.
+7. Club coordinator / admin dashboard: pending claims, evidence source preview, extracted field differences, edit/approve/reject, correction reason, bulk import review, last synced, expired entries, uploads; all actions persisted on server.
+8. Site search + global filters: club, event category, academic year, date window, deadline proximity, eligibility, verified/unverified; safe URL state and accessible keyboard interaction.
+9. If site has an AI campus chatbot, integrate read-only club/event/opportunity database answers with inline evidence and dates. Continue to use the OFFICIAL AIT Pune website for academic, admission, institutional policies and regulations. Never convert user-supplied Instagram and secondary research PDFs into authority for academics.
+10. Accessibility and polish: responsive skeleton loaders, accurate empty states, accessible contrast and focus, no broken images, stateful search, graceful external-link indicators and informative tooltips. No fake charts, inflated counters or invented leader photographs.
+
+BACKEND / API / AUTHORIZATION
+Implement or extend real persistent APIs; map to existing routing style. Illustrative actions, not a mandate to rename existing routes:
+GET /api/clubs and GET /api/clubs/:slug ; GET /api/clubs/:slug/leadership?academicYear=2026-27 ; GET /api/events ; GET /api/events/:slug ; GET /api/opportunities ; GET /api/sources/:id ; GET /api/admin/research/candidates ; POST /api/admin/research/import ; PATCH /api/admin/research/candidates/:id ; POST /api/admin/research/candidates/:id/approve ; POST .../reject ; PATCH /api/admin/clubs/:id.
+All mutation endpoints require proper role checking. Authenticate by existing method, validate input with current validation approach, rate-limit sensitive endpoints, sanitize text/URLs, and use parameterized queries or ORM protections. Never expose private student records, uploads or unapproved claims publicly. Protect file downloads by authorization where needed. Keep upload size constraints and malware/type validation for attachments.
+Retain existing internal registration flows ONLY for events the website's team is authorized to administer. If official registration happens on Unstop/organizer site, provide an EXTERNAL LINK rather than creating an unofficial parallel registration record as if it were accepted by the organizer.
+No Instagram scraping that bypasses login, robots, technical barriers, private accounts or platform rules. Prefer official APIs with permission, official post permalinks and human-approved import. Make re-checks manual or scheduled only with authorized technical access, rate limits and last-checked timestamps.
+
+DATA QUALITY, TIME, PRIVACY & LEGAL
+- Preserve source provenance for each FIELD where conflict is likely: date, deadline, prize, fee, office bearer, contact, organizer, eligibility and registration URL.
+- Clearly mark Verification Pending/Unknown when source is insufficient. Prefer no published record over false promise.
+- Display India Standard Time and dates consistently. Add never-before-the-event cutoff logic for labels such as ongoing/completed.
+- Avoid duplicating the same event if multiple clubs repost it; use eventId/source alias and many-to-many organizing clubs.
+- Secure storage, minimal personal data, role-specific visibility, delete/correct mechanism and image ownership checks.
+- Validate external links and suspicious shortened application URLs; avoid putting unverified or phishing links into prominent CTAs.
+- Include fair disclaimer: independent student-made project; not AIT official unless independently authorized.
+
+IMPLEMENTATION SEQUENCE (ACT, DON'T JUST DESCRIBE)
+PHASE 0 — REPO AUDIT: print current relevant stack/routes/models/features, list risks and precise plan; show git status and create safe branch/backup if possible.
+PHASE 1 — SOURCE INGESTION: place PDFs in private research input, validate JSON, build a source/provenance registry, report initial 23 club handles and rows. Record contradictions and missing dates.
+PHASE 2 — DATABASE & RBAC: nonbreaking migrations, relations, constraints, indexes, audit log; administrative approval and candidate queue.
+PHASE 3 — SEED: idempotent upsert of 23 clubs and approved records; queue unverified; summary counts and clear list of withheld claims.
+PHASE 4 — API & FRONTEND: integrate directory, club detail, event feed, hackathons, opportunity types, historical archive, search and visible source/verifiability cues. Honor existing theme/routes.
+PHASE 5 — EXISTING USER FLOW INTEGRATION: student dashboards, bookmarking, team finders, achievements, registration, saved opportunities, notifications and any existing chatbot; no regression.
+PHASE 6 — QA/SECURITY: unit, integration and E2E tests; verify login, profile, events, team flows, all 23 clubs, historic-only data, unknown registrations, mobile, accessibility and source links.
+PHASE 7 — LAUNCH/REPORT: run migrations/build/tests and app, summarize changes and exact files/routes/schema updated, imported/pending item counts, links requiring verification, command to repeat the import, and manual work still required.
+
+DETAILED ACCEPTANCE TESTS (MUST PASS)
+1. Existing homepage and authentication still work.
+2. Exactly 23 requested canonical Instagram handles, no duplicate rows.
+3. Each club card links to correct sanitized Instagram URL.
+4. Club names can appear even if current secretary unknown; no unauthenticated or 2025–26 office bearer displayed as 2026–27.
+5. Current leadership roles require 2026–27 primary evidence and independent approval; student/faculty/staff distinct.
+6. Innerve 11.0 is shown on Jan 29–30 2027 with verified official event URL, while registration details remain Unknown until verified.
+7. Anubhav appears only as an Open Source Contribution, NEVER a paid internship.
+8. Date conflict Black Hat CTF and Amethyst is queued, not silently resolved.
+9. Stellar IQ registration is not incorrectly shown OPEN after 16 Oct 2026.
+10. Cultural Aakriti (Sep 2025) appears only in AY 2025–26 archive, not future events.
+11. 'Register Now' appears only if an actual current internal registration or authoritative active external registration is present; otherwise 'View Official Event' or 'Registration details pending'.
+12. Seed/import run twice yields same club and event counts, and never deletes preexisting data.
+13. Admin can review provenance and approve/reject candidate rows; unapproved names are not visible in public results.
+14. Search/sorting/filters work; closed deadline and event upcoming can coexist.
+15. API access controls, TypeScript/build, database migrations and E2E smoke tests pass with no broken existing user workflows.
+16. No scraper bypasses Instagram access restrictions; no fabricated image, achievement, certificate, attendance count, internship or prize.
+
+REQUIRED FINAL DELIVERY FROM YOU, ANTIGRAVITY
+Do not stop after writing a plan. Implement code and migrate/seed database where environment permits. Give me a concise but complete execution report including: repository files modified, migrations run, sources read, import summary by Published/Review Pending/Rejected, screens/routes updated, test/build results, current URLs, discrepancies needing official verification, and any precise manual actions to finish. If blocked by unavailable production credentials, finish all safe local changes and state the exact blocked action; do not pretend remote deployment succeeded.
+
+START NOW BY AUDITING THE EXISTING REPOSITORY AND INPUT FILES. DO NOT REBUILD MY WEBSITE. DO NOT TREAT THE SECONDARY RESEARCH PDF AS VERIFIED DATA.

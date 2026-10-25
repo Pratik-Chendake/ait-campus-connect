@@ -1,0 +1,30 @@
+{
+  "name": "ait-campus-connect",
+  "version": "1.0.0",
+  "description": "AIT Pune Campus Achievement & Participation Portal",
+  "main": "server/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/db/seed.js",
+    "sync:supabase": "node server/scripts/sync_to_supabase.js",
+    "sync:unstop": "node scripts/sync-unstop.js",
+    "dev:server": "node server/index.js",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "apify-client": "^2.25.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0",
+    "zod": "^4.6.7"
+  }
+}

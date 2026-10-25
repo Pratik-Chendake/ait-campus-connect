@@ -1,0 +1,24 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+client/.env
+client/.env.local
+client/.env.*.local
+dist/
+.DS_Store
+*.log
+*.bak
+
+# SQLite database files and persistent data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+server/data/*.db
+server/data/*.db-wal
+server/data/*.db-shm
+
+# User uploaded files
+server/uploads/*
+!server/uploads/.gitkeep

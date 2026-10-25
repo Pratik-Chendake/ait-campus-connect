@@ -1,0 +1,18 @@
+HOW TO USE THIS PACK IN GOOGLE ANTIGRAVITY
+
+1. Open your EXISTING AIT Campus Connect / AIT Pune Campus Achievement & Participation Portal project folder as the active workspace in Antigravity. Do not start a new blank website.
+2. Copy or unzip this bundle inside that workspace under a private temporary folder such as research_inputs/ (or attach its files to the Antigravity chat if supported).
+3. Paste the text from ANTIGRAVITY_MASTER_INTEGRATION_PROMPT.txt into Antigravity.
+4. Tell Antigravity: 'The research_inputs folder has all input files. Modify my existing project in-place, preserve current features and data, verify sources, and implement the complete prompt.'
+5. Grant permission for code modifications, database migrations and local development runs only after reviewing requested sensitive operations. Provide development environment variables securely by the normal local .env mechanism; do NOT upload your .env, credentials, database exports, student data or API tokens in a chat.
+6. Before any production deployment, review Antigravity's test logs, schema migrations, claimed verification of AY 2026-27 appointments and any pending data conflicts.
+
+REFERENCE FILES
+- ANTIGRAVITY_MASTER_INTEGRATION_PROMPT.txt -> full copy/paste engineering prompt
+- ait_clubs_opportunities_seed.json -> 23 normalized Instagram club rows + a few vetted events + review queue
+- RESEARCH_INTEGRATION_RULES.md -> source reliability & conflict policy
+- document (6)(1).pdf -> historical 2025-26 report; 583 pages
+- AIT Student Club Instagram Directory(1).pdf -> secondary prior research (contains claims requiring verification)
+- Pasted text(3).txt -> user's strict research instruction, especially appointment year rules
+
+IMPORTANT: The existing website CODE/REPOSITORY is not included in this bundle. Antigravity must already have your existing project open. If not, provide the project folder or connect the repository separately; never include private credentials.

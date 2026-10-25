@@ -1,0 +1,208 @@
+# MASTER PROMPT: AIT Pune Clubs, Current Secretaries, Faculty/Staff, Events, Hackathons and Internships — AY 2026–27
+
+Act as a professional research analyst specializing in Army Institute of Technology (AIT), Pune, student clubs, institutional information, events, hackathons, internships, and student opportunities.
+
+I have provided a PDF containing club reports and activity information, along with a list of 23 official AIT Pune Instagram accounts.
+
+Your task is to research all 23 accounts, verify information using reliable public sources, and give me a complete, organized report directly in this chat.
+
+## CRITICAL RULE 1: SECRETARY AND STAFF DATA MUST BE EXCLUSIVELY FROM AY 2026–27
+
+This is the most important instruction. Follow it without exception.
+
+For every club, collect the following information ONLY if it is confirmed for academic year 2026–27:
+
+- Club secretary
+- Joint secretary
+- President or chairperson
+- Vice president
+- Technical, cultural, sports, or other student secretaries
+- Student office bearers and committee members
+- Faculty in-charge or faculty coordinator
+- Staff in-charge or staff coordinator
+- Other officially appointed club leadership
+
+### Strict restrictions
+
+1. Do NOT use any secretary or staff names from academic year 2025–26 or earlier.
+2. Do NOT copy names from the uploaded PDF's previous-year club reports and present them as current.
+3. Do NOT assume that a secretary, faculty member, or staff member has continued into 2026–27.
+4. Do NOT use an old Instagram post, old committee poster, archived report, or previous-year website as proof of a current position.
+5. Do NOT infer the current academic year from the date on which a webpage was accessed.
+6. A name is acceptable only when a reliable source explicitly identifies the person's position for AY 2026–27 or when an official source clearly establishes that appointment for that academic year.
+7. Search for 2026–27 committee announcements, current official AIT pages, current club announcements, and institutional communications.
+8. If the role cannot be verified, write **"Not verified for AY 2026–27."**
+9. If no suitable source is found, write **"No verified AY 2026–27 data found."**
+10. Never fill missing information with old names simply to complete the table.
+
+**The uploaded PDF may help identify club names, alternative names, and official Instagram accounts, but its AY 2025–26 secretary and staff lists must not be reused as current data.**
+
+## RULE 2: USE THE UPLOADED PDF CORRECTLY
+
+Read the uploaded PDF as a reference document to understand the clubs and their historical activities.
+
+However:
+- Treat information labelled AY 2025–26 as historical.
+- Do not present historical events as upcoming events.
+- Do not treat previous-year committee members as current office bearers.
+- Use historical event information only when it is relevant to identifying a club or understanding its activities.
+- Verify current events and opportunities using fresh, accessible sources.
+- Clearly distinguish facts extracted from the PDF from information verified through current public sources.
+
+## RULE 3: ANALYZE ALL 23 INSTAGRAM ACCOUNTS
+
+1. DDQ Club — https://www.instagram.com/ddqclub/
+2. AIT Nature Club — https://www.instagram.com/ait_nature_club/
+3. AIT Fine Arts — https://www.instagram.com/fine._.arts._.ait/
+4. AIT Sports Club — https://www.instagram.com/aitsportsclub/
+5. AIT Media Cell — https://www.instagram.com/ait_media_cell/
+6. GDSC AIT Pune — https://www.instagram.com/gdsc_aitpune/
+7. AIT Cycling Club — https://www.instagram.com/ait_cycling_club/
+8. Open Source Club AIT — https://www.instagram.com/ossclub.ait/
+9. AIT PR Cell — https://www.instagram.com/ait_pr_cell/
+10. AIT Feet Tappers — https://www.instagram.com/ait_feet_tappers/
+11. Radio Raaga — https://www.instagram.com/radioraaga/
+12. AIT Cultural Board — https://www.instagram.com/culturalboard_ait/
+13. Research and Development Cell — https://www.instagram.com/research_and_development_cell/
+14. AIT Magazine Board — https://www.instagram.com/magboard/
+15. AIT E-Cell — https://www.instagram.com/ecell_ait/
+16. AIT Spiritual Club — https://www.instagram.com/ait_spiritual_club/
+17. ISDF AIT — https://www.instagram.com/isdf_ait/
+18. AIT NSS / Rotaract Club — https://www.instagram.com/ait_nss_rotaract_club/
+19. AIT Robotics Club — https://www.instagram.com/robotics.club_ait/
+20. AIT Technical Board — https://www.instagram.com/aittechnicalboard/
+21. AIT Coding Cell — https://www.instagram.com/coding_cell_ait/
+22. AIT Social Media Cell — https://www.instagram.com/ait_social_media_cell/
+23. AIT Film Club — https://www.instagram.com/filmclub_ait/
+
+Do not skip an account just because Instagram access is restricted. Search other publicly accessible sources and clearly report any remaining access limitations.
+
+## RULE 4: FIND EVENTS AND OPPORTUNITIES
+
+Search the accessible Instagram posts, reels, captions, carousels, pinned posts, and linked official pages.
+
+Identify:
+
+- Upcoming club events and workshops
+- Hackathons and coding competitions
+- Internships and job opportunities
+- Research projects and fellowships
+- AI, ML, robotics, cybersecurity, and open-source events
+- Entrepreneurship and startup competitions
+- Technical seminars and guest lectures
+- Cultural festivals, dance, music, theatre, and fine arts events
+- Sports tournaments and cycling events
+- Film, photography, media, and content creation competitions
+- NSS, Rotaract, volunteering, and social initiatives
+- Club recruitment and membership openings
+- Scholarships and other useful student opportunities
+
+Include opportunities advertised by these clubs, including relevant external opportunities they share.
+
+Verify dates, eligibility, application deadlines, and registration links wherever possible.
+
+## RULE 5: REPORT FORMAT
+
+### SECTION A — VERIFIED SECRETARIES AND FACULTY/STAFF FOR AY 2026–27
+
+Create this table:
+
+| No. | Club | Position | Full Name | Academic Year | Verification Source | Status |
+|---|---|---|---|---|---|---|
+
+Requirements:
+- Every included name must be verified for AY 2026–27.
+- Provide a direct source link for each appointment.
+- Never include a previous-year name as a current appointment.
+- If information is unavailable, show the club and mark the relevant field "Not verified for AY 2026–27."
+- Distinguish student secretaries from faculty coordinators and non-faculty staff.
+- Do not assume that a faculty in-charge and a staff in-charge are the same role.
+
+### SECTION B — UPCOMING EVENTS
+
+Sort events by their nearest upcoming event date.
+
+Include event name, organizing club, date, venue or mode, eligibility, fees, prizes, registration deadline, registration link, original announcement, and verification status.
+
+### SECTION C — INTERNSHIPS AND CAREER OPPORTUNITIES
+
+For each listing, include the company or organizer, role, domain, eligibility, paid/unpaid status if confirmed, work mode, deadline, official application link, and source.
+
+Prioritize applications that are currently open.
+
+### SECTION D — HACKATHONS AND COMPETITIONS
+
+Include the organizer, competition name, theme, format, team size, eligibility, registration deadline, event dates, prize pool if confirmed, official link, and verification status.
+
+### SECTION E — RECENTLY ANNOUNCED EVENTS WITH UNCONFIRMED DATES
+
+Include relevant announcements where the event or deadline has not yet been confirmed. Label them clearly and do not invent dates.
+
+### SECTION F — COMPLETED EVENTS AND EXPIRED OPPORTUNITIES
+
+List these separately from upcoming opportunities. Sort from latest to oldest.
+
+### SECTION G — CLUB-WISE SUMMARY
+
+Include all 23 clubs and report:
+- Whether AY 2026–27 secretary data was verified
+- Whether AY 2026–27 faculty/staff data was verified
+- Number of confirmed upcoming events
+- Number of currently open applications
+- Number of hackathons or competitions
+- Most recent relevant announcement
+- Sources checked and any research limitations
+
+## RULE 6: DATE AND SORTING REQUIREMENTS
+
+Use the actual current date when performing the research. Display the research date and use Indian Standard Time where applicable.
+
+Sort the report as follows:
+
+1. Upcoming events and opportunities, ordered by nearest event date or deadline.
+2. Open internships, hackathons, and applications, ordered by nearest deadline.
+3. Newly announced opportunities with unconfirmed dates.
+4. Completed events and expired opportunities, newest to oldest.
+5. AY 2026–27 secretary and faculty/staff directory.
+6. Club-wise research coverage and missing information.
+
+Clearly distinguish event dates from announcement dates and registration deadlines.
+
+## RULE 7: SOURCE VERIFICATION
+
+Use official AIT Pune sources and current official club announcements wherever possible.
+
+For each important claim:
+- Include a direct source URL.
+- Identify the date of the announcement.
+- Verify the relevant academic year for leadership appointments.
+- Mark uncertain information as unverified.
+- Do not fabricate names, roles, dates, prizes, or links.
+- Do not describe an expired application as open.
+- Do not claim to have examined private or inaccessible posts.
+- If two sources conflict, explain the conflict rather than silently choosing one.
+
+## RULE 8: GIVE EVERYTHING DIRECTLY IN THIS CHAT
+
+I want the entire report in your response, not merely instructions on how to research it.
+
+Do not provide only a summary or tell me to conduct the research myself.
+
+Present the results in readable tables and organized sections. If the report is too long, divide it into numbered parts and continue until all sections and all 23 clubs have been covered.
+
+Do not omit clubs to shorten the response. If a club has no verified data, include it and state that clearly.
+
+## FINAL QUALITY CHECK
+
+Before submitting the final report, confirm:
+
+- All 23 accounts have been audited.
+- No previous-year secretary or staff names have been used as current AY 2026–27 information.
+- Every reported leadership appointment has an appropriate source.
+- Historical information from the uploaded PDF is labelled correctly.
+- Upcoming events appear before past events.
+- Completed events are sorted newest to oldest.
+- Open applications and expired applications are distinguished.
+- All missing data and access limitations are disclosed.
+
+**Accuracy is more important than completeness. If current 2026–27 information cannot be verified, leave it unverified instead of using previous-year data.**
